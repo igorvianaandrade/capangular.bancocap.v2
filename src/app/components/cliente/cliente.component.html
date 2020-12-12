@@ -3,12 +3,22 @@
     <form>
         <mat-form-field>
             <input matInput placeholder="Nome" 
-            [(ngModel)]="cliente.nome" name="nome">
+            required
+            [(ngModel)]="cliente.nome" name="nome" #nome="ngModel">
+            <div [hidden]="nome.valid || nome.pristine"
+                class="alert alert-danger">
+                Nome é obrigatório!
+            </div>
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="CPF"  
+            <input matInput placeholder="CPF" #cpf="ngModel"
+            required
             [(ngModel)]="cliente.cpf" name="cpf"
             mask= "000.000.000-00">
+            <div [hidden]="cpf.valid || cpf.pristine"
+                class="alert alert-danger">
+                CPF é obrigatório!
+            </div>
         </mat-form-field>
     </form>
 
