@@ -8,7 +8,9 @@ import { Cliente } from 'src/app/model/cliente.model';
 })
 export class ClienteComponent implements OnInit {
 
-//TODO:  @Output novoCliente 
+  rotaNovoCliente:string = '/clientes-view';
+
+  //TODO:  @Output novoCliente 
   cliente: Cliente = {
     nome: '',
     cpf: ''
@@ -18,9 +20,12 @@ export class ClienteComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  submitted = false;
+  
+  onSubmit() { this.submitted = true;     
+  } 
 
   criarCliente(): void {
     alert("Cliente criado com sucesso!");
-    //console.log(this.cliente);
   }
 }

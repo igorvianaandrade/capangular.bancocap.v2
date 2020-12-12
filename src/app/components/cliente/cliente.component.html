@@ -1,6 +1,6 @@
 <mat-card>
     <mat-card-title>Cadastrar Cliente</mat-card-title>
-    <form>
+    <form (ngSubmit)="onSubmit()" #clienteForm="ngForm">
         <mat-form-field>
             <input matInput placeholder="Nome" 
             required
@@ -22,7 +22,8 @@
         </mat-form-field>
     </form>
 
-    <button mat-raised-button (click)="criarCliente()" routerLink="/clientes-view" color="primary">
+    <button type="submit" mat-raised-button [disabled]="!clienteForm.form.valid"
+        routerLink = {{this.rotaNovoCliente}} color="primary">
         Salvar
     </button>
     
