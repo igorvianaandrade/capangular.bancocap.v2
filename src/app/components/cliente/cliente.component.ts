@@ -26,8 +26,6 @@ export class ClienteComponent implements OnInit {
 
     this.submitted = true;
 
-    alert("Cliente" +  form.name.toString() + "cadastrado com sucesso!");
-    console.log(form);
   } 
   
 }

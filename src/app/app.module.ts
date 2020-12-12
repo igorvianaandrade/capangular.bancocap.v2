@@ -24,6 +24,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { NgxMaskModule, IConfig } from 'ngx-mask'
 import { MatGridListModule } from '@angular/material/grid-list';
 import { ClienteViewComponent } from './components/cliente/cliente-view/cliente-view.component';
+import { DepositoComponent } from './components/deposito/deposito.component';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -38,7 +39,8 @@ const maskConfig: Partial<IConfig> = {
     HomeComponent,
     ClienteComponent,
     ContaComponent,
-    ClienteViewComponent
+    ClienteViewComponent,
+    DepositoComponent
   ],
   imports: [
     BrowserModule,

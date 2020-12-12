@@ -1,0 +1,20 @@
+<mat-card>
+    <div *ngIf="depositoForm.invalid && depositoForm.dirty"
+        class="alert alert-danger">
+        Preencha todos os campos corretamente!
+    </div>
+
+    <mat-card-title>Realizar Depósito</mat-card-title>
+    <form (ngSubmit)="onSubmit(depositoForm)" #depositoForm="ngForm" autocomplete="off" >
+        
+        <mat-form-field>
+            <input matInput placeholder="Hash"
+            [(ngModel)]="deposito.conta.hash" name="hash">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Valor"
+            [(ngModel)]="deposito.valor" name="valor">
+        </mat-form-field>
+    </form>
+
+</mat-card>
