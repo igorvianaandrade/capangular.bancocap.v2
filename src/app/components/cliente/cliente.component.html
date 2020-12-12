@@ -6,7 +6,9 @@
             [(ngModel)]="cliente.nome" name="nome">
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="CPF"  [(ngModel)]="cliente.cpf" name="cpf">
+            <input matInput placeholder="CPF"  
+            [(ngModel)]="cliente.cpf" name="cpf"
+            mask= "000.000.000-00">
         </mat-form-field>
     </form>
 

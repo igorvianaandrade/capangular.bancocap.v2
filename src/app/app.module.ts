@@ -21,6 +21,11 @@ import { ContaComponent } from './components/conta/conta.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { NgxMaskModule, IConfig } from 'ngx-mask'
+
+const maskConfig: Partial<IConfig> = {
+  validation: false,
+};
 
 @NgModule({
   declarations: [
@@ -43,7 +48,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    NgxMaskModule.forRoot(maskConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]
