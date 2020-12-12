@@ -1,23 +1,29 @@
 <mat-card>
+    <div *ngIf="clienteForm.invalid && clienteForm.dirty"
+         class="alert alert-danger">
+         Preencha todos os campos corretamente!
+    </div>
     <mat-card-title>Cadastrar Cliente</mat-card-title>
-    <form (ngSubmit)="onSubmit()" #clienteForm="ngForm">
+    <form (ngSubmit)="onSubmit(clienteForm)" #clienteForm="ngForm" autocomplete="off" > 
         <mat-form-field>
             <input matInput placeholder="Nome" 
             required
-            [(ngModel)]="cliente.nome" name="nome" #nome="ngModel">
+            [(ngModel)]="cliente.nome" name="nome" #nome="ngModel"
+            minlength="3" maxlength="100">
             <div [hidden]="nome.valid || nome.pristine"
                 class="alert alert-danger">
-                Nome é obrigatório!
+                Nome é obrigatório e deve ter no mínimo três caracteres!
             </div>
         </mat-form-field>
         <mat-form-field>
             <input matInput placeholder="CPF" #cpf="ngModel"
             required
             [(ngModel)]="cliente.cpf" name="cpf"
-            mask= "000.000.000-00">
+            mask= "000.000.000-00"
+            minlength="11">
             <div [hidden]="cpf.valid || cpf.pristine"
                 class="alert alert-danger">
-                CPF é obrigatório!
+                CPF é obrigatório e deve ter no mínimo 11 caracteres!
             </div>
         </mat-form-field>
     </form>
@@ -27,7 +33,7 @@
         Salvar
     </button>
     
-    <button mat-raised-button routerLink="/">
+    <button mat-raised-button (click)="clienteForm.reset()">
         Cancelar
     </button>
 </mat-card>
