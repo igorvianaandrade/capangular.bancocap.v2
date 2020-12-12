@@ -22,6 +22,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { NgxMaskModule, IConfig } from 'ngx-mask'
+import { MatGridListModule } from '@angular/material/grid-list';
+import { ClienteViewComponent } from './components/cliente/cliente-view/cliente-view.component';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -35,7 +37,8 @@ const maskConfig: Partial<IConfig> = {
     HomeNavegacaoComponent,
     HomeComponent,
     ClienteComponent,
-    ContaComponent
+    ContaComponent,
+    ClienteViewComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +52,8 @@ const maskConfig: Partial<IConfig> = {
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    NgxMaskModule.forRoot(maskConfig)
+    NgxMaskModule.forRoot(maskConfig),
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
