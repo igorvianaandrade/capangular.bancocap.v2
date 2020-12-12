@@ -53,6 +53,12 @@ Entre na pasta via prompt de comando e os comandos digite:
 ```
 npm install
 npm start ou ng serve
+
+Instalação do componente ngx-mask para mascara do Cliente(CPF).
+
+Referência
+https://www.npmjs.com/package/ngx-mask
+
 ```
 
 Acesse a aplicação no navegador: localhost:4200
