@@ -1,17 +1,17 @@
 <mat-card>
-    <div *ngIf="depositoForm.invalid && depositoForm.dirty"
+    <div *ngIf="saqueForm.invalid && saqueForm.dirty"
         class="alert alert-danger">
         Preencha todos os campos corretamente!
     </div>
 
-    <mat-card-title>Realizar Depósito</mat-card-title>
-    <form (ngSubmit)="onSubmit(depositoForm)" #depositoForm="ngForm" autocomplete="off" >
+    <mat-card-title>Realizar Saque</mat-card-title>
+    <form (ngSubmit)="onSubmit(saqueForm)" #saqueForm="ngForm" autocomplete="off" >
         <div><b>Data:</b> {{currentDate}}</div>
         <br>
         <mat-form-field>
             <input matInput placeholder="Hash"            
             required
-            [(ngModel)]="deposito.conta.hash" name="hash" #hash="ngModel"
+            [(ngModel)]="saque.conta.hash" name="hash" #hash="ngModel"
             minlength="40" maxlength="40">
         </mat-form-field>
         <div [hidden]="hash.valid || hash.pristine"
@@ -22,7 +22,7 @@
             <input matInput currencyMask placeholder="Valor"
             required
             min="1" max="1000.00"
-            [(ngModel)]="deposito.valor" name="valor" #valor="ngModel">
+            [(ngModel)]="saque.valor" name="valor" #valor="ngModel">
             <div [hidden]="valor.valid || valor.pristine"
                 class="alert alert-danger">
                 Valor é obrigatório e deve ser acima de 0, até R$1.000,00!
@@ -30,12 +30,12 @@
         </mat-form-field>        
     </form>
 
-    <button type="submit" mat-raised-button [disabled]="!depositoForm.form.valid"
-            routerLink = {{this.rotaNovoDeposito}} color="primary">
+    <button type="submit" mat-raised-button [disabled]="!saqueForm.form.valid"
+            routerLink = {{this.rotaNovoSaque}} color="primary">
             Salvar
     </button>
 
-    <button mat-raised-button (click)="depositoForm.reset()">
+    <button mat-raised-button (click)="saqueForm.reset()">
         Cancelar
     </button>
 

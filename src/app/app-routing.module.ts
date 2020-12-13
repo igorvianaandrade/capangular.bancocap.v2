@@ -5,6 +5,8 @@ import { ClienteComponent } from './components/cliente/cliente.component';
 import { ContaComponent } from './components/conta/conta.component';
 import { DepositoComponent } from './components/deposito/deposito.component';
 import { HomeComponent } from './components/home/home.component';
+import { SaqueComponent } from './components/saque/saque.component';
+import { TransferenciaComponent } from './components/transferencia/transferencia.component';
 
 const routes: Routes = [
   {
@@ -26,6 +28,14 @@ const routes: Routes = [
   {
     path: "depositos",
     component: DepositoComponent
+  },
+  {
+    path: "saques",
+    component: SaqueComponent
+  },
+  {
+    path: "transferencias",
+    component: TransferenciaComponent
   }
 ];
 

@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Deposito } from 'src/app/model/deposito.model';
+import { Saque } from 'src/app/model/saque.model';
 
 @Component({
-  selector: 'app-deposito',
-  templateUrl: './deposito.component.html',
-  styleUrls: ['./deposito.component.css']
+  selector: 'app-saque',
+  templateUrl: './saque.component.html',
+  styleUrls: ['./saque.component.css']
 })
-export class DepositoComponent implements OnInit {  
-  rotaNovoDeposito:string = '/depositos-view';
+export class SaqueComponent implements OnInit {  
+  rotaNovoSaque:string = '/saques-view';
   submitted = false;
   currentDate = new Date().toLocaleDateString();
 
-  deposito: Deposito ={
+  saque: Saque ={
     data: '',
     valor: 0,    
     conta: {
