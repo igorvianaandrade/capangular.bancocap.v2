@@ -4,6 +4,7 @@ import { ClienteViewComponent } from './components/cliente/cliente-view/cliente-
 import { ClienteComponent } from './components/cliente/cliente.component';
 import { ContaComponent } from './components/conta/conta.component';
 import { DepositoComponent } from './components/deposito/deposito.component';
+import { ExtratoComponent } from './components/extrato/extrato.component';
 import { HomeComponent } from './components/home/home.component';
 import { SaqueComponent } from './components/saque/saque.component';
 import { TransferenciaComponent } from './components/transferencia/transferencia.component';
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path: "transferencias",
     component: TransferenciaComponent
+  },
+  {
+    path: "extratos",
+    component: ExtratoComponent
   }
 ];
 

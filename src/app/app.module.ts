@@ -28,6 +28,8 @@ import { DepositoComponent } from './components/deposito/deposito.component';
 import { CurrencyMaskConfig, CurrencyMaskModule, CURRENCY_MASK_CONFIG } from 'ng2-currency-mask';
 import { SaqueComponent } from './components/saque/saque.component';
 import { TransferenciaComponent } from './components/transferencia/transferencia.component';
+import { ExtratoComponent } from './components/extrato/extrato.component';
+import { AgGridModule } from 'ag-grid-angular';
 
 //Moeda.
 export const CustomCurrencyMaskConfig: CurrencyMaskConfig = {
@@ -62,8 +64,8 @@ const maskConfig: Partial<IConfig> = {
     ClienteViewComponent,
     DepositoComponent,
     SaqueComponent,
-    TransferenciaComponent
-    
+    TransferenciaComponent,
+    ExtratoComponent    
   ],
   imports: [
     BrowserModule,
@@ -80,7 +82,7 @@ const maskConfig: Partial<IConfig> = {
     NgxMaskModule.forRoot(maskConfig),
     MatGridListModule,
     CurrencyMaskModule,
-    CurrencyMaskModule
+    AgGridModule
   ],
   providers: [{provide: LOCALE_ID, useValue: 'br'},
               { provide: CURRENCY_MASK_CONFIG, useValue: CustomCurrencyMaskConfig }],
