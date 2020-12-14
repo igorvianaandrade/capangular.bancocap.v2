@@ -15,7 +15,7 @@ export class ExtratoComponent implements OnInit {
   extrato: Extrato = {data: '', valor: 0, tipoOperacao: '', hashOrigem: ''};
 
   saque: Saque ={
-    data: '13/12/2020',
+    data: '13/12/2020 08:08:32',
     valor: 10,
     conta: {
       hash: '4d73157b6a4d824733a9a4853be98643cfd4b40e',
@@ -28,7 +28,7 @@ export class ExtratoComponent implements OnInit {
   }
 
   deposito: Deposito ={
-    data: '13/12/2020',
+    data: '13/12/2020 10:40:32',
     valor: 400,    
     conta: {
       hash: '4r73157b6a4d824733a9a4853be98643cfd4b40e',
@@ -41,7 +41,7 @@ export class ExtratoComponent implements OnInit {
   }
 
   transferencia: Transferencia ={
-    data: '14/12/2020',
+    data: '14/12/2020 07:05:20',
     valor: 800,    
     contaOrigem: {
       hash: '4r73159b6a4d824733a9a4853be98643cfd4b40e',
@@ -77,9 +77,6 @@ export class ExtratoComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    for (let i in this.rowData ) {
-      console.log(i);
-    }
   } 
 
 }
