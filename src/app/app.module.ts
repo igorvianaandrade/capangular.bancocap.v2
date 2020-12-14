@@ -44,8 +44,8 @@ export const CustomCurrencyMaskConfig: CurrencyMaskConfig = {
 
 //Data local.
 import { registerLocaleData } from '@angular/common';
-import localeBr from '@angular/common/locales/br';
-registerLocaleData(localeBr);
+import localeBr from '@angular/common/locales/pt';
+registerLocaleData(localeBr, 'pt');
 
 //Mask dos campos de CPF.
 const maskConfig: Partial<IConfig> = {
@@ -84,7 +84,7 @@ const maskConfig: Partial<IConfig> = {
     CurrencyMaskModule,
     AgGridModule
   ],
-  providers: [{provide: LOCALE_ID, useValue: 'br'},
+  providers: [{provide: LOCALE_ID, useValue: 'pt-BR'},
               { provide: CURRENCY_MASK_CONFIG, useValue: CustomCurrencyMaskConfig }],
   bootstrap: [AppComponent]
 })

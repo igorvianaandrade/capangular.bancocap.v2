@@ -1,7 +1,7 @@
 <mat-card>    
     <mat-card-title>Extrato do Cliente</mat-card-title>
     
-    <div class="table-striped">
+    <!--<div class="table-striped">
         <table class="table" border="1">
             <tr>
               <td><b>Data</b></td>
@@ -12,12 +12,19 @@
           
             <tr *ngFor="let operacao of rowData">
               <td>{{operacao.data}}</td>
-              <td>{{operacao.valor}}</td>
+              <td>{{operacao.valor | currency:'BRL':true}}</td>
               <td>{{operacao.tipoOperacao}}</td>
               <td>{{operacao.hashOrigem}}</td>
             </tr>
           </table>
-    </div>
+    </div>-->
+
+    <ag-grid-angular
+      style="width: 870px; height: 300px;"
+      class="ag-theme-alpine"
+      [rowData]="rowData"
+      [columnDefs]="columnDefs">
+    </ag-grid-angular>
 
     <button mat-raised-button routerLink="/" color="primary">
         Fechar
@@ -25,10 +32,5 @@
     
 </mat-card>
 
-<!--<ag-grid-angular
-style="width: 500px; height: 500px;"
-class="ag-theme-alpine"
-[rowData]="rowData"
-[columnDefs]="columnDefs">
-</ag-grid-angular>-->
+
 
